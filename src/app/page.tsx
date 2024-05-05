@@ -1,113 +1,88 @@
-import Image from "next/image";
-
+"use client";
+import Navbar from "@/components/navbar/page";
+// import About from "./about/page";
+// import Contact from "./contact/page";
+// import Portfolio from "./portfolio/page";
+// import Skills from "./skills/page";
+import { motion ,MotionConfig} from "framer-motion";
+import TextAnimation from "@/components/TextAnimation/page";
+import ScrollToTopOnReload from '@/components/ScrollToTop'; 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main>
+      <ScrollToTopOnReload />
+            <Navbar />
+      <motion.div initial={{ height: "100%", position:"fixed"}} animate={{ height: "0%" }} transition={{ delay: 3.5, duration: 1.65 }} className="w-full h-full overflow-y-hidden bg-[#565388] px-[1vw] flex flex-col items-center justify-between z-[22]">
+                <div className="portrait:w-1/2 w-[10vw] mt-[2vw] text-center text-white flex flex-col items-center justify-center">
+                  <div>DESCRIPTION</div>
+                  <div className="inline">&copy; 2024</div>
+                </div>
+                <motion.div initial={{height:0}} animate={{height:100}} transition={{delay:0.6,duration:1,ease:"easeInOut"}} className="portrait:text-[10vw] portrait:gap-x-[1.5vh] overflow-y-hidden landscape:text-[4.5vw] flex flex-wrap gap-x-[1vw] items-start justify-start font-bold text-white">
+                <div className="portrait:hidden landscape:inline-block"><TextAnimation delay={0.6} params={"This"} color={''} /></div>
+                <div className="portrait:hidden landscape:inline-block"><TextAnimation delay={0.6} params={"is"} color={''} /></div>
+                <TextAnimation delay={0.6} params={"Ravi "} color={"#36A330"} />
+                <TextAnimation delay={0.6} params={"Kumar "} color={''} />
+                <div className="portrait:hidden landscape:inline-block"><TextAnimation delay={0.6} params={"Chavva"} color={''} /></div>
+                </motion.div>   
+                <div className="width-[10vw] h-[10vh] text-white">
+                    <h5 className="text-2xl">watch now</h5>
+                  </div>                     
+        </motion.div>
+        {/* {green container} */}
+        <motion.div initial={{ height: "100%" }} animate={{ height: "0%" }} transition={{ delay: 3.6, duration: 1.55 }}  className="w-[100vw] h-full bg-[#0ED354] absolute right-0 z-[10]">
+            
+        </motion.div>
+      <motion.div initial={{ top: "100vh"  }} animate={{ top: "0" }} transition={{ delay: 3.5, duration: 1.55 }} className="h-[100vh] bg-[url('/tileps1.jpg')] bg-center bg-cover 
+                                md:bg-[url('/tileps5.jpg')] md:bg-right-bottom 
+                                flex flex-col px-[5vw]
+                                landscape:bg-[url('/tileps5.jpg')] landscape:bg-right-bottom relative">
+                                
+      
+            
+            {/* Text container */}
+            <div className="h-[80vh] portrait:w-[60vw] md:w-[50vw] lg:w-[55vw] flex flex-col items-start justify-center
+            portrait:mt-[12vh]        
+            sm:mt-[10vh]
+            md:h-full md:pt-10 md:gap-[min(1vw,10px)]
+            landscape:pt-16 landscape:pr-8
+            lg:pr-[min(1vw,10px)]
+            ">
+                <motion.div initial={{height:0}} animate={{height:"8vw"}} transition={{delay:4,duration:1.2,ease:"easeInOut"}} 
+                className="portrait:px-0 portrait:text-[8vw] portrait:min-h-[12vw] 
+                sm:px-0 sm:text-[8vw] sm:min-h-[10vh]
+                landscape:text-[3.5vw] landscape:min-h-[6vw] landscape:min-w-[40vw] landscape:flex landscape:items-start landscape:justify-start landscape:gap-[1vw]
+                md:last:hidden 
+                lg:last:inline-block
+                overflow-y-hidden md:w-[50vw] flex items-start justify-between font-bold text-white">
+                  <div className="portrait:hidden sm:hidden lg:inline-block"><TextAnimation delay={0.6} params={"This"} color={''} /></div>
+                <div className="portrait:hidden sm:hidden lg:inline-block"><TextAnimation delay={0.6} params={"is"} color={''} /></div>
+                <div className=" portrait:mr-[2vh]"><TextAnimation delay={0.6} params={"Ravi "} color={"#36A330"} /></div>
+                <div className=" portrait:mr-[2vh]"><TextAnimation delay={0.6} params={"Kumar "} color={''} /></div>
+                <div className="portrait:hidden sm:hidden landscape:inline-block"><TextAnimation delay={0.6} params={"Chavva"} color={''} /></div>
+                </motion.div>
+                <h3 className="portrait:hidden sm:block sm:text-xl
+                md:text-2xl md:mb-[2vh] lg:block
+                lg:text-2xl xl:text-3xl font-bold text-[#dadada]">
+                Aspiring Data Scientist
+                </h3>
+                <p className="portrait:hidden sm:hidden lg:block md:text-[1.7vw] md:w-[min(40vw,70rem)] md:font-normal text-white lg:text-[2.1vh]">
+                 Welcome to to my data science portfolio!
+                 Explore my journey into data analysis, machine learning,and visualizations
+                </p>
+                <div className="flex py-2 gap-8 portrait:flex-col sm:flex-col md:flex-row portrait:gap-10 portrait:mt-8 sm:ml-[8vh] md:ml-0">
+                  <MotionConfig transition={{duration:.15,ease:"easeInOut"}}>
+                  <motion.button whileHover={{scale:1.15}} className="portrait:hidden bg-[#36A330] rounded-lg hover:bg-[#0ED354] sm:p-1 lg:p-2 portrait:p-1 text-white">View Work</motion.button>
+                  <motion.button whileHover={{scale:1.15}} className="lg:hidden bg-[#36A330] rounded-lg hover:bg-[#0ED354] hover:text-black sm:p-1 lg:p-2 portrait:p-1 px-2 text-white">Resume</motion.button>
+                  <motion.button whileHover={{scale:1.15}} className="bg-[#D6D6D6] text-black hover:bg-white rounded-lg sm:p-1 lg:p-2 portrait:p-1 transition duration-150 ease-out hover:ease-in">Contact Me</motion.button>
+                  </MotionConfig>
+                </div>
+              </div>
+            </motion.div>
+            {/* <About />
+            <Skills />
+            <Portfolio />
+            <Contact /> */}
+            
     </main>
   );
 }
